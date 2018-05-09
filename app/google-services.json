@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "8429035355",
+    "firebase_url": "https://arcane-product.firebaseio.com/ ",
+    "project_id": "arcane-product",
+    "storage_bucket": "arcane-product.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8429035355:android:21e1705fd05e6d7c",
+        "android_client_info": {
+          "package_name": "com.cog.arcaneRider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8429035355-kih3r7v4f7jf4mah1km9970rlepbvlq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": " AIzaSyDOK1PqabwAYFq_MYLw1k7mF37LU250Fsc "
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

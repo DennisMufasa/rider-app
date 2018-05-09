@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:layout_alignParentStart="true"
+        android:elevation="5dp"
+        android:id="@+id/toolbarfare">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/close"
+            android:padding="10dp"
+            android:src="@drawable/ic_close_light"
+            android:background="@null"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="FARE ESTIMATE"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:id="@+id/toolbarfaretxt"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/close"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <!--Pickup & Drop Locations Layout-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_layout"
+        android:layout_below="@+id/toolbarfare"
+        android:elevation="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorWhite"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorWhite"
+            android:layout_alignParentStart="true"
+            android:id="@+id/pickup_location_layout">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/start_icon"
+                android:layout_marginLeft="10dp"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@mipmap/upper"
+                android:background="@null"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:hint="Set Pickup Location"
+                android:textColor="@color/colorPrimary"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:id="@+id/pick_location_fare"
+                android:gravity="left|center"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/start_icon" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/view3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/pickup_location_layout"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/view3"
+            android:id="@+id/drop_location_layout"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorWhite"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/view"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton5"
+                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:src="@mipmap/lower"
+                    android:background="@null"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="Set Drop Location"
+                    android:textColor="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="left|center"
+                    android:id="@+id/drop_location_fare"
+                    android:layout_toEndOf="@+id/imageButton5" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2_end_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/location_layout"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:background="#F3F2F5"
+        card_view:cardCornerRadius="4dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUV"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:id="@+id/categorytxtfare"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/lightGrey"
+                android:layout_below="@+id/categorytxtfare"
+                android:layout_margin="5dp"
+                >
+
+            </View>
+                    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/header_layout">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$100"
+                android:textSize="50sp"
+                android:textColor="@color/colorPrimary"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:layout_margin="30dp"
+                android:id="@+id/fareestimatetxt"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fareestimatetxt"
+                android:text="This is just an estimate.Actual fares may vary slightly based on traffic and discount "
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp"
+            android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/newdestlayout">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ENTER A NEW DESTINATION"
+            android:textColor="@color/lightGrey"
+            android:ellipsize="end"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:id="@+id/newdest"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+             />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

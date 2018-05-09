@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cog.arcaneRider">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.rider.aracanemap.googlemapsv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Google Plus permission -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Call permission -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".adapter.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name=".SplashActivity_"
+            android:label="@string/app_name"
+            android:theme="@style/MyMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".GCM.PushNotificationService"
+            android:exported="false">
+            <intent-filter android:priority="10000">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".LaunchActivity_"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:screenOrientation="portrait"
+            android:value="@string/app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider337950799925113"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".SignupName_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SigninActivity"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SignupEmail_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SignupPassword_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SignupMobile_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SigninActivity_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".MapActivity"
+            android:theme="@style/StatusBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".ForgotPasswordActivity_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SettingsActivity_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".EditProfileActivity_" />
+        <activity
+            android:name=".YourTripsActivity_"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".PaymentSelectActivity_"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".CardPaymentActivity_"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="58ed39c94fbcd33ec9afa9b3b5b81a533b1c320a" />
+
+        <activity
+            android:name=".CardPaymentActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".YourTripDetailsActivity_"
+            android:theme="@style/MyMaterialTheme" />
+
+    </application>
+
+</manifest>

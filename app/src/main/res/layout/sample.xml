@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.cog.arcaneRider.YourTripsActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/fare_layout"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/estimate_layout"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/darker_gray"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/time_layout"
+                    android:layout_alignEnd="@+id/vertical_line">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ETA"
+                        android:id="@+id/txt_eta"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="12sp"
+                        android:textColor="@color/darker_gray"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:padding="3dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="--"
+                        android:id="@+id/estimated_time"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/txt_eta"
+                        android:padding="3dp"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5sp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/darker_gray"
+                    android:layout_toStartOf="@+id/max_layout"
+                    android:id="@+id/vertical_line"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/max_layout"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MAX SIZE"
+                        android:id="@+id/txt_maxsize"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/darker_gray"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_centerHorizontal="true"
+                        android:padding="3dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="6 PEOPLES"
+                        android:id="@+id/number_of_people"
+                        android:layout_below="@+id/txt_maxsize"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="visible"
+                        android:padding="3dp"
+                        />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="0.5sp"
+                    android:layout_height="60dp"
+                    android:background="@color/darker_gray"
+                    android:layout_toEndOf="@+id/max_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/view6" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/min_fare_layout"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/view6">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MIN FARE"
+                        android:id="@+id/txt_min_fare"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/darker_gray"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:textSize="12sp"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="$25"
+                        android:id="@+id/minimum_fare"
+                        android:layout_below="@+id/txt_min_fare"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="visible"
+                        android:textSize="12sp"
+                        android:padding="5dp"
+                        />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:background="@color/darker_gray"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/per_minute_layout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/view7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_per_minute"
+                        android:id="@+id/txt_per_minute"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/darker_gray"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="$25"
+                        android:id="@+id/per_minute_price"
+                        android:layout_below="@+id/txt_per_minute"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="visible"
+                        android:textSize="12sp"
+                        android:padding="5dp"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5sp"
+                    android:layout_height="60dp"
+                    android:background="@color/darker_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/view7" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/per_miles_layout"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/per_minute_layout">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_per_km"
+                        android:id="@+id/txt_per_miles"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/darker_gray"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:padding="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="$25"
+                        android:id="@+id/per_km_price"
+                        android:layout_below="@+id/txt_per_miles"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="visible"
+                        android:textSize="12sp"
+                        android:padding="5dp"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
